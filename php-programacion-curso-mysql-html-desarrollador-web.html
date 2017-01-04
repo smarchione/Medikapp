@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+
+<meta name="google-site-verification" content="xWxEFUMgHER4nLx6TAXD9rHFhclvQkEX-RX6qClbszI" />
+
+
+
+<script type="text/javascript">
+
+
+
+
+
+
+
+  var _gaq = _gaq || [];
+
+
+
+  _gaq.push(['_setAccount', 'UA-20047775-3']);
+
+
+
+  _gaq.push(['_trackPageview']);
+
+
+
+
+
+
+
+  (function() {
+
+
+
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+
+
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+
+
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+
+
+  })();
+
+
+
+
+
+
+
+</script>
+
+
+
+<title>Codigo fuente PHP para rellenar lista desplegable SELECT con datos Mysql - Curso programación sistemas</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!--Start of Zopim Live Chat Script-->
+<!--
+<script type="text/javascript">
+
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+
+$.src='//cdn.zopim.com/?4kJkn8gHBDH2MF189x6vB2KJO58sWdEF';z.t=+new Date;$.
+
+type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+
+</script>
+
+<!--End of Zopim Live Chat Script-->
+
+</head>
+
+
+
+<body style="font-family:vernada; font-size:18px;">
+
+<p style="font-weight:normal; margin-left:170px; font-size:16px; font-family:Verdana, Arial, Helvetica, sans-serif; margin-bottom:40px;"> Código fuente del post <a href="/consulta-mysql-inner-join-para-unir-tablas-relacionadas" style="color:#000000;">Como mostrar datos Mysql en Lista Desplegable SELECT en PHP</a></p>
+
+<? include('adsense-arriba.php');?>
+
+<pre>	
+<textarea cols="100" rows="12" style="border:0px; margin-left:100px; font-family:verdana; font-size:16px;">
+// Consultar la base de datos
+$consulta_mysql='select * from Amigos';
+$resultado_consulta_mysql=mysql_query($consulta_mysql,$conexion);
+  
+echo "<select name='select1'>";
+while($fila=mysql_fetch_array($resultado_consulta_mysql)){
+    echo "<option value='".$fila['nombre']."'>".$fila['nombre']."</option>";
+}
+echo "</select>";
+	</textarea>
+	</pre>
+
+<? include('adsense-abajo.php');?>
+</body>
+
+</html>
+
